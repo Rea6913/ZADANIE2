@@ -9,7 +9,9 @@ namespace PadawansTask2
             // put your code here
             int symm = 0;
             if (count < 1)
-                throw new NotImplementedException();
+                throw new ArgumentException();
+            if (number == Int32.MaxValue || number == Int32.MinValue)
+                throw new OverflowException();
             for (int i = 1; i <= count; i++)
             {
                 symm += number;
